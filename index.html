@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Calulator</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Orbitron " rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <style>
+        *{
+            font-family: 'Orbitron' , sans-serif ;
+            font-size: 35px;
+        } 
+        .container{
+            background-color: rgba(61, 62, 62, 0.696);
+            width: 500px;
+            height: 600px;
+            border-radius: 20px;
+            margin-left: 550px;
+            margin-top: 50px;
+            border: 2px solid rgb(55, 55, 55);
+            box-shadow: 0 0 50px 10px rgb(80, 81, 79);
+        }
+        .content{
+            margin-left: 50px;
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: repeat(5, 100px);
+            text-align: center;
+            margin-top: 20px; 
+        }
+        .display{
+            color: rgba(4, 4, 4, 0.772);
+            margin-left: 50px;
+            margin-top: 20px; 
+            background-color: rgba(22, 44, 20, 0.742);
+            width: 400px;
+            height: 100px;
+            border-radius: 10px;
+            font-size: 65px;
+            box-shadow: 0 0 10px 5px rgba(56, 55, 53, 0.522);
+            border: 2px solid rgba(251, 251, 251, 0.577);
+
+            animation-name: ikran;
+            animation-duration: 1.5s;
+        }
+        .buttons{
+            border-radius: 20px;
+            box-shadow: 0 0 10px 5px rgba(56, 55, 53, 0.522);
+            animation-name: kunopka;
+            animation-duration: 2s;
+        }
+        button:hover{
+            box-shadow: 0 0 10px 5px rgba(97, 96, 94, 0.522);
+            background-color: rgba(219, 216, 213, 0.646);
+        }
+        body{
+            background-color: lightgray;
+        }
+        #text_bottom,.res{
+            text-align: center;
+            animation-name: texr;
+            animation-duration: 0.8s;
+        }
+        @keyframes kunopka {
+            0%{margin: 300px;}
+            100%{margin: 0px;}
+        }
+        @keyframes ikran{
+            0%{margin-left: -1000px;}
+            100%{margin-left: 50px;}
+        }
+        @keyframes texr{
+            0%{margin-top: 200px;}
+            100%{margin-top: 0px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="display" id="display"></div>
+        <br>
+        <div class="content">
+            <button value="1" class="buttons">1</button>
+            <button value="2" class="buttons">2</button>
+            <button value="3" class="buttons">3</button>
+
+            <button value="/" class="buttons">/</button>
+
+            <button value="4" class="buttons">4</button>
+            <button value="5" class="buttons">5</button>
+            <button value="6" id="" class="buttons">6</button>
+
+            <button value="*" class="buttons">*</button>
+
+            <button value="7" class="buttons">7</button>
+            <button value="8" class="buttons">8</button>
+            <button value="9" class="buttons">9</button>
+            <button value="-" class="buttons">-</button>
+            <button value="0" class="buttons">0</button>
+            <button value="." class="buttons">.</button>
+            <button value="=" id="goto" class="buttons">=</button>
+            <button value="+" class="buttons">+</button>
+        </div>
+        <div class="res"><button>C</button></div>
+        <div id="text_bottom"><b> Calulator from jQuery</b></div>
+    </div>
+</body>
+</html>
